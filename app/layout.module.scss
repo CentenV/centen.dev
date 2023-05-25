@@ -1,0 +1,53 @@
+@import "./style";
+
+@keyframes image-appear {
+    from {
+        opacity: 0%;
+        transform: translateY(-40%);
+    }
+    to {
+        opacity: 100%;
+        transform: translateY(0);
+    }
+}
+
+#layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8vw;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+
+    *:hover {
+        cursor: pointer;
+    }
+
+    #logo-container {
+        #logo {
+            opacity: 0%;
+            animation: image-appear 0.5s ease-in-out 0s 1 forwards normal;
+        }
+    }
+
+    #page-selection-container {
+        display: flex;
+        gap: 3vh;
+
+        .page {
+            // background-color: aqua;
+            text-decoration: none;
+            color: $on-background-color;
+            font-weight: 700;
+            font-size: 1em;
+
+            :hover {
+                background-color: aqua;
+            }
+        }
+    }
+
+    
+
+    
+}

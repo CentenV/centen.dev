@@ -1,8 +1,7 @@
-@import "style";
+@import "../style";
 
 #splash-screen-container {
     background-color: $background-color;
-    // background-color: aqua;
     height: calc(100vh - 1em);
     display: grid;
     grid-template-columns: 1fr;
@@ -13,6 +12,6 @@
     #splash-logo {
         width: 30%;
         height: 30%;
-        @include fade-in-out-animation($duration: 1.4s, $delay: 0.2s);
+        @include fade-in-out-animation($duration: 1.0s, $delay: 0.2s);
     }
 }
