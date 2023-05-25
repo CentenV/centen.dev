@@ -1,0 +1,52 @@
+// _style.scss - Stores all the variables for the page //
+
+
+// Fonts //
+$default-font: var(--default-font) !global;
+
+// Colors //
+$background-color: rgb(0, 0, 0);
+$on-background-color: rgb(255, 255, 255) !global;
+
+// Animations //
+// Fade
+@keyframes fade {
+    from {
+        opacity: 0%;
+    }
+    to {
+        opacity: 100%;
+    }
+}
+@mixin fade-animation ($duration, $timing-function: ease-in-out, $delay: 0, $iterations: 1, $fill-mode: forwards, $direction: normal ) {
+    opacity: 0%;
+    animation-name: fade;
+    animation-duration: $duration;
+    animation-timing-function: $timing-function;
+    animation-delay: $delay;
+    animation-iteration-count: $iterations;
+    animation-fill-mode: $fill-mode;
+    animation-direction: $direction;
+}
+// Fade in and out
+@keyframes fade {
+    0% {
+        opacity: 0%;
+    }
+    50% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 0%;
+    }
+}
+@mixin fade-in-out-animation ($duration, $timing-function: ease-in-out, $delay: 0, $iterations: 1, $fill-mode: forwards, $direction: normal) {
+    opacity: 0%;
+    animation-name: fade;
+    animation-duration: $duration;
+    animation-timing-function: $timing-function;
+    animation-delay: $delay;
+    animation-iteration-count: $iterations;
+    animation-fill-mode: $fill-mode;
+    animation-direction: $direction;
+}

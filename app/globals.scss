@@ -1,0 +1,8 @@
+// global.scss //
+@import "style";
+
+body {
+    font-family: $default-font;
+    background-color: $background-color;
+    color: $on-background-color;
+}
