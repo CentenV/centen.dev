@@ -8,9 +8,12 @@ $default-font: var(--default-font) !global;
 $background-color: rgb(0, 0, 0);
 $on-background-color: rgb(255, 255, 255) !global;
 
+// Borders // 
+$border-radius: 1em;
+
 // Animations //
-// Fade
-@keyframes fade {
+// Fade in
+@keyframes fadeIn {
     from {
         opacity: 0%;
     }
@@ -20,7 +23,7 @@ $on-background-color: rgb(255, 255, 255) !global;
 }
 @mixin fade-animation ($duration, $timing-function: ease-in-out, $delay: 0, $iterations: 1, $fill-mode: forwards, $direction: normal ) {
     opacity: 0%;
-    animation-name: fade;
+    animation-name: fadeIn;
     animation-duration: $duration;
     animation-timing-function: $timing-function;
     animation-delay: $delay;
@@ -29,7 +32,7 @@ $on-background-color: rgb(255, 255, 255) !global;
     animation-direction: $direction;
 }
 // Fade in and out
-@keyframes fade {
+@keyframes fadeIn {
     0% {
         opacity: 0%;
     }
@@ -42,7 +45,41 @@ $on-background-color: rgb(255, 255, 255) !global;
 }
 @mixin fade-in-out-animation ($duration, $timing-function: ease-in-out, $delay: 0, $iterations: 1, $fill-mode: forwards, $direction: normal) {
     opacity: 0%;
-    animation-name: fade;
+    animation-name: fadeIn;
+    animation-duration: $duration;
+    animation-timing-function: $timing-function;
+    animation-delay: $delay;
+    animation-iteration-count: $iterations;
+    animation-fill-mode: $fill-mode;
+    animation-direction: $direction;
+}
+// Dissolve in
+@keyframes dissolve-in-fade-z {
+    0% {
+        filter: blur(1em);
+        -webkit-filter: blur(1em);
+        opacity: 0%;
+        transform: translateY(-10%);
+    }
+
+    75% {
+        opacity: 100%;
+    }
+
+    100% {
+        filter: blur(0em);
+        -webkit-filter: blur(0em);
+        opacity: 100%;
+        transform: translateY(-10%);
+    }
+}
+
+@mixin dissolve-in-fade-z-animation ($duration, $timing-function: ease-in-out, $delay: 0, $iterations: 1, $fill-mode: forwards, $direction: normal) {
+    filter: blur(2em);
+    -webkit-filter: blur(2em);
+    opacity: 0%;
+    
+    animation-name: dissolve-in-fade-z;
     animation-duration: $duration;
     animation-timing-function: $timing-function;
     animation-delay: $delay;

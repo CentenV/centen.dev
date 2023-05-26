@@ -13,11 +13,13 @@
 
 #layout {
     display: flex;
-    justify-content: center;
+    // justify-content: center;
     align-items: center;
     gap: 8vw;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
+    padding-left: 1em;
+    padding-right: 1em;
 
     *:hover {
         cursor: pointer;
@@ -33,9 +35,9 @@
     #page-selection-container {
         display: flex;
         gap: 3vh;
+        align-self: center;
 
         .page {
-            // background-color: aqua;
             text-decoration: none;
             color: $on-background-color;
             font-weight: 700;
