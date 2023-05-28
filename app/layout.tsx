@@ -48,8 +48,8 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
         <SplashScreen />
         {/* Content */}
         {displayPage && (<div id="page">
-          <LayoutNavigationBar />
           <div id="content">{children}</div>
+          <LayoutNavigationBar />
         </div>)}
       </body>
     </html>

@@ -6,3 +6,8 @@ body {
     background-color: $background-color;
     color: $on-background-color;
 }
+
+#content {
+    width: 100%;
+    height: calc(100vh - 5.4em);
+}
