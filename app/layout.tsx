@@ -3,19 +3,28 @@
 import './globals.scss'
 import SplashScreen from "./splashscreen/splashscreen";
 import LAYOUTSTYLE from "./layout.module.scss";
-import { Montserrat } from "next/font/google";
+import { Montserrat, Azeret_Mono } from "next/font/google";
 import Link from 'next/link';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 
 
-// Import Montserrat
+
+// Import Fonts
+// Montserrat
 export const MONTSERRAT = Montserrat({
   variable: '--default-font',
   subsets: ["latin"],
   display: "swap"
 });
+// Azeret Mono
+export const AZERET_MONO = Azeret_Mono({
+  variable: '--secondary-font',
+  subsets: ["latin"],
+  // display: "swap"
+});
+
 
 
 // Site
@@ -39,7 +48,8 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
     <html lang="en">
       <style jsx global>{`
         :root {
-          --default-font: ${MONTSERRAT.style.fontFamily}
+          --default-font: ${MONTSERRAT.style.fontFamily};
+          --secondary-font: ${AZERET_MONO.style.fontFamily};
         }
       `}</style>
       {/* onContextMenu={preventRightClick} */}

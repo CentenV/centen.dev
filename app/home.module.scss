@@ -2,16 +2,88 @@
 
 #home-page-container {
     #greeting {
-        padding: 5em;
-        display: flex;
-        justify-content: space-between;
+        $gradient-line-height: 1em;
+
+        padding: 2em;
+        display: grid;
+        grid-template-rows: $gradient-line-height auto;
+        row-gap: 1em;
+
+        #gradient-line-decoration {
+            display: block;
+            height: $gradient-line-height;
+            // background-color: aqua;
+            border-radius: $border-radius;
+            @include extend-width($duration: 0.8s);
+
+            background: #3494E6;
+            background: -webkit-linear-gradient(to right, #EC6EAD, #3494E6);
+            background: linear-gradient(to right, #EC6EAD, #3494E6);
+            background-size: 400% 400%;
+            @keyframes gradient-animation {
+                0% {
+                    background-position: 0% 50%;
+                }
+            
+                50% {
+                    background-position: 100% 50%;
+                }
+            
+                100% {
+                    background-position: 0% 50%;
+                }
+            }
+            // animation: gradient-animation 3s linear 0s infinite;
+        }
 
         #greeting-image {
             margin-right: 5vw;
             width: 25vw;
             height: 100%;
             border-radius: $border-radius;
-            @include dissolve-in-fade-z-animation($duration: 0.8s)
+            @include dissolve-in-fade-z-animation($duration: 0.8s, $timing-function: ease-out);
+        }
+
+        // Home Page Header (Name, Alias, Role)
+        $header-font-size: 4em;
+        $header-font-weight: 800;
+        $subheader-font-size: 1.5vw;
+        $subheader-font-weight: 400;
+        $subheader-color: rgb(180, 180, 180);
+        #greeting-header {
+            #greeting-name {
+                font-size: $header-font-size;
+                font-weight: $header-font-weight;
+                padding-left: 0.1em;
+            }
+            #greeting-header-seperator {
+                font-size: $header-font-size;
+                font-weight: 200;
+                margin: 0em 0.5em;
+            }
+            #greeting-alias {
+                font-size: $header-font-size;
+                font-weight: $header-font-weight;
+            }
+
+            #greeting-role {
+                margin-top: 0.5em;
+                margin-left: 0.5em;
+
+                .role {
+
+                }
+                .role-divider {
+                    margin: 0em 0.5em;
+                    font-weight: 200;
+                }
+                span {
+                    font-family: $secondary-font;
+                    font-size: $subheader-font-size;
+                    font-weight: $subheader-font-weight;
+                    color: $subheader-color;
+                }
+            }
         }
     }
 }
