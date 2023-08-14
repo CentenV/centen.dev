@@ -4,6 +4,10 @@ import { use, useEffect, useState } from "react";
 import SPLASHSCREENSTYLE from "./splashscreen.module.scss";
 import Image from "next/image";
 
+
+/////////////////////////////
+// Splash Screen Component //
+/////////////////////////////
 export default function SplashScreen() {
     const [display, setDisplay] = useState(true);
 

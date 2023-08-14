@@ -76,11 +76,16 @@ function LayoutNavigationBar() {
         <Image src="/icons/fulllogo.svg" alt="CentenV | Vincent Nguyen" width={300} height={50} id={LAYOUTSTYLE["logo"]} draggable={false} onClick={() => router.push("/")} />
       </div>
       <div id={LAYOUTSTYLE["page-selection-container"]}>
-        <Link href={"/projects"} className={`${LAYOUTSTYLE["page"]}`}>PROJECTS / GALLERY</Link>
+        {/* <Link href={"/projects"} className={`${LAYOUTSTYLE["page"]}`}>PROJECTS / GALLERY</Link>
         <Link href={"/experience"} className={`${LAYOUTSTYLE["page"]}`}>EXPERIENCE</Link>
         <Link href={"/skills"} className={`${LAYOUTSTYLE["page"]}`}>SKILLS</Link>
         <Link href={"/education"} className={`${LAYOUTSTYLE["page"]}`}>EDUCATION</Link>
-        <Link href={"/about"} className={`${LAYOUTSTYLE["page"]}`}>ABOUT</Link>
+        <Link href={"/about"} className={`${LAYOUTSTYLE["page"]}`}>ABOUT</Link> */}
+        <div className={`${LAYOUTSTYLE["page"]}`}>PROJECTS / GALLERY</div>
+        <div className={`${LAYOUTSTYLE["page"]}`}>EXPERIENCE</div>
+        <div className={`${LAYOUTSTYLE["page"]}`}>SKILLS</div>
+        <div className={`${LAYOUTSTYLE["page"]}`}>EDUCATION</div>
+        <div className={`${LAYOUTSTYLE["page"]}`}>ABOUT</div>
       </div>
     </nav>
   );

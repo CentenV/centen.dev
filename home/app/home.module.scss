@@ -45,35 +45,46 @@
         }
 
         // Home Page Header (Name, Alias, Role)
-        $header-font-size: 3em;
+        @media (max-width: 600px) {
+            $header-font-size: 1vw;
+            $header-font-weight: 800;
+            $subheader-font-size: 1.5vw;
+            $subheader-font-weight: 400;
+            $subheader-color: rgb(180, 180, 180);
+        }
+        $header-font-size: 3.2em;
         $header-font-weight: 800;
-        $subheader-font-size: 1.5vw;
+        $subheader-font-size: 1.4em;
         $subheader-font-weight: 400;
         $subheader-color: rgb(180, 180, 180);
         #greeting-header {
-            #greeting-name {
-                font-size: $header-font-size;
-                font-weight: $header-font-weight;
-                padding-left: 0.1em;
-            }
-            #greeting-header-seperator {
-                font-size: $header-font-size;
-                font-weight: 200;
-                margin: 0em 0.5em;
-            }
-            #greeting-alias {
-                font-size: $header-font-size;
-                font-weight: $header-font-weight;
+            #greeting-names {
+                display: flex;
+                flex-direction: column;
+
+                #name {
+                    font-size: $header-font-size;
+                    font-weight: $header-font-weight;
+                    padding-left: 0.1em;
+                }
+                #greeting-eol {
+                    font-size: $header-font-size;
+                    font-weight: 200;
+                    margin: 0em 0.5em;
+                }
+                #alias {
+                    font-size: $header-font-size;
+                    font-weight: $header-font-weight;
+                }
             }
 
             #greeting-role {
                 margin-top: 0.5em;
-                margin-left: 0.5em;
 
                 .role {
 
                 }
-                .role-divider {
+                .role-eol {
                     margin: 0em 0.5em;
                     font-weight: 200;
                 }

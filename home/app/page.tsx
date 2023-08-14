@@ -2,6 +2,10 @@ import "./globals.scss";
 import HOMEPAGESTYLE from "./home.module.scss";
 import Image from "next/image";
 
+
+/////////////////////////
+// Home Page Component //
+/////////////////////////
 export default function Home() {
   return (
     <div>
@@ -9,15 +13,29 @@ export default function Home() {
         <div id={HOMEPAGESTYLE["greeting"]}>
           <div id={HOMEPAGESTYLE["gradient-line-decoration"]}></div>
           <div id={HOMEPAGESTYLE["greeting-header"]}>
-            <span id={HOMEPAGESTYLE["greeting-name"]}>Vincent Nguyen</span>
-            <span id={HOMEPAGESTYLE["greeting-header-seperator"]}>/</span>
-            <span id={HOMEPAGESTYLE["greeting-alias"]}>CentenV</span>
+            <div id={HOMEPAGESTYLE["greeting-names"]}>
+              <div>
+                <span id={HOMEPAGESTYLE["name"]}>Vincent Nguyen</span>
+                <span id={HOMEPAGESTYLE["greeting-eol"]}>\</span>
+              </div>
+              <div>
+                <span id={HOMEPAGESTYLE["alias"]}>CentenV</span>
+                <span id={HOMEPAGESTYLE["greeting-eol"]}>\</span>
+              </div>
+            </div>
             <div id={HOMEPAGESTYLE["greeting-role"]}>
-              <span className={`${HOMEPAGESTYLE["role"]}`}>Software Engineer & Developer</span>
-              <span className={`${HOMEPAGESTYLE["role-divider"]}`}>/</span>
-              <span className={`${HOMEPAGESTYLE["role"]}`}>Computer Science</span>
-              <span className={`${HOMEPAGESTYLE["role-divider"]}`}>/</span>
-              <span className={`${HOMEPAGESTYLE["role"]}`}>Undergraduate at Colorado School of Mines</span>
+              <div>
+                <span className={`${HOMEPAGESTYLE["role"]}`}>Software Engineer & Developer</span>
+                <span className={`${HOMEPAGESTYLE["role-eol"]}`}>\</span>
+              </div>
+              <div>
+                <span className={`${HOMEPAGESTYLE["role"]}`}>Computer Science</span>
+                <span className={`${HOMEPAGESTYLE["role-eol"]}`}>\</span>
+              </div>
+              <div>
+                <span className={`${HOMEPAGESTYLE["role"]}`}>Undergraduate @ Colorado School of Mines</span>
+                <span className={`${HOMEPAGESTYLE["role-eol"]}`}>\</span>
+              </div>
             </div>
           </div>
 
@@ -25,6 +43,7 @@ export default function Home() {
         </div>
         <div>
           {/* <Image src={"/images/portrait.JPG"} alt="Portrait" width={1647} height={2203} id={HOMEPAGESTYLE["greeting-image"]} draggable={false} /> */}
+          Coming soon.
         </div>
       </div>
     </div>
