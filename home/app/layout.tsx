@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 
 import './globals.scss'
 import SplashScreen from "./splashscreen/splashscreen";
@@ -6,8 +6,8 @@ import LAYOUTSTYLE from "./layout.module.scss";
 import { Montserrat, Azeret_Mono } from "next/font/google";
 import Link from 'next/link';
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
-import { useRouter } from 'next/navigation';
+// import { useEffect, useState } from 'react';
+// import { useRouter } from 'next/navigation';
 
 
 
@@ -34,15 +34,15 @@ export const metadata = {
 }
 export default function RootLayout({children}: {children: React.ReactNode}) {
   // Display Content After Splash Screen
-  const [displayPage, setDisplayPage] = useState(false);
-  useEffect(() => {
-    setTimeout(() => {setDisplayPage(true)}, 1000);
-  }, [])
+  // const [displayPage, setDisplayPage] = useState(false);
+  // useEffect(() => {
+  //   setTimeout(() => {setDisplayPage(true)}, 1000);
+  // }, [])
 
   // Prevent Right Click
-  const preventRightClick = (e: any) => {
-    e.preventDefault()
-  }
+  // const preventRightClick = (e: any) => {
+  //   e.preventDefault()
+  // }
 
   return (
     <html lang="en">
@@ -55,12 +55,12 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
       {/* onContextMenu={preventRightClick} */}
       <body suppressHydrationWarning={true}>
         {/* Splash Screen */}
-        <SplashScreen />
-        {/* Content */}
-        {displayPage && (<div id="page">
-          <div id="content">{children}</div>
-          <LayoutNavigationBar />
-        </div>)}
+        {/* <SplashScreen>
+          {/* Content */}
+          {/* {children} */}
+        {/* </SplashScreen>} */}
+        {/* <LayoutNavigationBar /> */}
+        <div>test</div>
       </body>
     </html>
   )
@@ -68,12 +68,12 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
 
 // Layout Navigation Bar
 function LayoutNavigationBar() {
-  const router = useRouter();
+  // const router = useRouter();
 
   return (
     <nav id={LAYOUTSTYLE["layout"]}>
       <div id={LAYOUTSTYLE["logo-container"]}>
-        <Image src="/icons/fulllogo.svg" alt="CentenV | Vincent Nguyen" width={300} height={50} id={LAYOUTSTYLE["logo"]} draggable={false} onClick={() => router.push("/")} />
+        {/* <Image src="/icons/fulllogo.svg" alt="CentenV | Vincent Nguyen" width={300} height={50} id={LAYOUTSTYLE["logo"]} draggable={false} onClick={() => router.push("/")} /> */}
       </div>
       <div id={LAYOUTSTYLE["page-selection-container"]}>
         {/* <Link href={"/projects"} className={`${LAYOUTSTYLE["page"]}`}>PROJECTS / GALLERY</Link>
